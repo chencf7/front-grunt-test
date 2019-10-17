@@ -9,5 +9,20 @@
   </head>
   <body>
     <div class="info">Hello Grunt!</div>
+    <div>
+      <input id="cross_btn" type="button" value="跨域请求发送">
+    </div>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#cross_btn").click(function(){
+          console.log("输出");
+          var baseurl = "/api/";
+          $.get(baseurl+"search", {}, function(ret){
+            debugger;
+          });
+        });
+      })
+    </script>
   </body>
 </html>
